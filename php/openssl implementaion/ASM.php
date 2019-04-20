@@ -16,7 +16,7 @@ class ASM
 
             openssl_pkey_export($keys, $this->private_key);
 
-            $this->public_key = openssl_pkey_get_details($keys)['keys'];
+            $this->public_key = openssl_pkey_get_details($keys)['key'];
         }
     }
 
