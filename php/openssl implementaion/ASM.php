@@ -60,17 +60,3 @@ class ASM
         return $decrypted_data;
     }
 }
-
-// Implementation
-
-// For a new user
-$user1 = new ASM(true);
-$user1->getPublicKey();
-$user1->getPrivateKey();
-$encrypted_data = $user1->encrypt('bla bla bla', $user1->getPublicKey());
-$decrypted_data = $user1->decrypt($encrypted_data, $user1->getPrivateKey());
-
-// For an existing user
-$user2 = new ASM(); // or $user2 = new ASM();
-// $encrypted_data = $user2->encrypt('bla bla bla', $public_key_from_db);
-// $decrypted_data = $user2->decrypt($encrypted_data, $private_key_from_db);
