@@ -54,7 +54,7 @@ class ASM
             throw new Exception('Private key cannot be null or empty.');
         }
 
-        openssl_private_decrypt($data_to_decrypt, $decrypted_data, $this->private_key);
+        openssl_private_decrypt($data_to_decrypt, $decrypted_data, $user_private_key);
         return $decrypted_data;
     }
 }
