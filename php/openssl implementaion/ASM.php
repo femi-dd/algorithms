@@ -6,8 +6,6 @@ class ASM
     private $public_key;
     private $private_key;
 
-    // Set $generate_new_keys to true to generate keys for a new user(when a new object initialized)
-    // Set $generate_new_keys to false/default if only to encrypt and decrypt for existing users then pass(private/public key from db/other source to the encrypt/decrypt methods)
     public function __construct($generate_new_keys = false)
     {
         if ($generate_new_keys) {
